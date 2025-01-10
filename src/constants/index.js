@@ -254,7 +254,7 @@ const projects = [
     tech: ['Assembly', 'Python'],
     img: mathmagician,
     carousel: [mathmagician,play],
-    source_link: 'https://github.com/Rhaegar121/Math-Magicians',
+    source_link: 'https://github.com/Mustafa0503/A-Platform-Game.git',
     live_link: 'https://youtu.be/VcIZG3Qjfb0?si=iuzYQSQjYd6UE4Ai',
   },
   {
