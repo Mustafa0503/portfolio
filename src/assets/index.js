@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './logo.jpg';
 import light from './light.png';
 import dark from './dark.png';
 
