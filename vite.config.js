@@ -6,8 +6,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    assetsDir: '',
+    assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: './index.html',
+      },
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
