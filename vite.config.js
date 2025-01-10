@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'; // eslint-disable-line
-import react from '@vitejs/plugin-react'; // eslint-disable-line
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   base: '/portfolio/',
@@ -7,8 +7,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    sourcemap: true,
     rollupOptions: {
-      input: 'index.html'
+      input: 'index.html',
+      output: {
+        manualChunks: undefined
+      }
     }
   },
   resolve: {
