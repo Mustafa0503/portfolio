@@ -12,6 +12,8 @@ const Contact = () => {
     message: '',
   });
 
+  const [warning, setWarning] = useState('');
+
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -26,9 +28,12 @@ const Contact = () => {
     event.preventDefault();
     const form = event.target;
     const isValid = form.checkValidity();
+
     if (isValid) {
-      // Submit the form
-      form.submit();
+      // Fake submission: Show warning and don't actually submit
+      setWarning('Something went wrong. Please contact me via email in my resume at the top.');
+      
+      // Optionally reset the form here if needed:
       setForm({
         name: '',
         email: '',
@@ -43,14 +48,16 @@ const Contact = () => {
         Get in Touch!
       </motion.h1>
       <motion.p variants={fadeIn('', '', 0.15, 1)} className={style.subtitle}>
-        I&apos;m always excited to hear about new opportunities and collaborations. Don&apos;t hesitate to reach out and let&apos;s make something great.
+        I&apos;m always excited to hear about new opportunities and internships. Don&apos;t hesitate to reach out and let&apos;s make something great.
       </motion.p>
+      
+      {/* Display warning message if there was an issue */}
+      {warning && <div className={style.warning}>{warning}</div>}
+      
       <div className={style.container}>
         <motion.form
           variants={slideIn('left', '', 0, 1)}
           onSubmit={handleSubmit}
-          action="https://formspree.io/f/mgeqgkdd"
-          method="post"
           className={style.form_container}
         >
           <div className={style.form}>

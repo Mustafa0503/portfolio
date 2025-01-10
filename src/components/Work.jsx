@@ -23,7 +23,7 @@ const Work = () => {
   return (
     <div className="relative">
       <motion.h1 variants={textVariant()} className={style.title}>
-        My Recent Works
+        My Recent Projects
       </motion.h1>
       <div className={style.project_container}>
         {/* Projects Card */}

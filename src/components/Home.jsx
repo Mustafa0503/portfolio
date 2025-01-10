@@ -16,18 +16,18 @@ const Home = () => (
         Hi, I&apos;m
         {' '}
         <motion.span variants={fadeIn('', '', 0.1, 1)} className={style.name}>
-          Kaung Myat Kyaw
+          Abulimiti Musitapa
         </motion.span>
       </p>
       <p className={style.intro}>
-        Also known as
+        You can call me
         {' '}
         <motion.span variants={fadeIn('', '', 0.3, 1)} className={style.name}>
-          Barry
+          Mustafa
         </motion.span>
       </p>
       <motion.p variants={fadeIn('', '', 0.5, 1)} className={style.desc}>
-        I am a full-stack web developer
+        I am a software engineering specialist
       </motion.p>
       <motion.button
         variants={fadeIn('', '', 0.6, 1)}
@@ -40,10 +40,44 @@ const Home = () => (
         }}
       >
         <span className={style.btn_hover}>
-          Check out my work
+          Check out my work!
         </span>
         <span className={style.btn}>
-          Check out my work
+          Check out my work!
+        </span>
+        <MdOutlineArrowForwardIos className={style.arrow} />
+      </motion.button>
+
+      {/* Add the new button below */}
+      <motion.button
+        variants={fadeIn('', '', 0.8, 1)} // Adjust animation delay
+        className={style.btn_container}
+        onClick={() => {
+            window.location.href = '/#work'; // Example: Redirect to the "About" section
+          
+        }}
+      >
+        <span className={style.btn_hover}>
+        View my projects
+        </span>
+        <span className={style.btn}>
+        View my projects
+        </span>
+        <MdOutlineArrowForwardIos className={style.arrow} />
+      </motion.button>
+      {/* Add the new button below */}
+      <motion.button
+        variants={fadeIn('', '', 0.8, 1)} // Adjust animation delay
+        className={style.btn_container}
+        onClick={() => {
+            window.location.href = 'https://drive.google.com/file/d/1DoEBN8G1LRMEI4iAdHiZrI6fqXDtfS8t/view?usp=sharing'; // Example: Redirect to the "About" section
+        }}
+      >
+        <span className={style.btn_hover}>
+        resume
+        </span>
+        <span className={style.btn}>
+        resume
         </span>
         <MdOutlineArrowForwardIos className={style.arrow} />
       </motion.button>

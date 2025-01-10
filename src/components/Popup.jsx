@@ -26,11 +26,15 @@ const Popup = ({ handleClose, project }) => (
         </p>
         <p className={style.description}>{project.desc}</p>
         <div className={style.link}>
-          <a href={project.source_link} target="_blank" className={`${style.source_link} ${style.btn_container}`} rel="noreferrer">
-            <span className={style.btn_hover}>View Source</span>
-            <span className={style.btn}>View Source</span>
-          </a>
-          {project.id !== 2 && project.id !== 5 ? (
+        <a href={project.source_link} target="_blank" className={`${style.source_link} ${style.btn_container}`} rel="noreferrer">
+            <span className={style.btn_hover}>
+                {project.id === 8 ? "Closed Source" : project.id === 7 ? "Coming Soon" : "View Source"}
+            </span>
+            <span className={style.btn}>
+                {project.id === 8 ? "Closed Source" : project.id === 7 ? "Coming Soon" : "View Source"}
+            </span>
+        </a>
+          {project.id !== 7 &&project.id !== 8 &&project.id !== 9 && project.id !== 1  && project.id !== 5 ? (
             <a href={project.live_link} target="_blank" className={`${style.live_link} ${style.btn_container}`} rel="noreferrer">
               <span className={style.btn_hover}>View Live</span>
               <span className={style.btn}>View Live</span>

@@ -14,36 +14,24 @@ const About = () => (
         Hey there! I&apos;m
         {' '}
         <a
-          href="https://www.linkedin.com/in/kaungmyatkyaw/"
+          href="https://www.linkedin.com/in/mustafa-abulmit-66960824b/"
           target="_blank"
           className={style.link}
           rel="noreferrer"
         >
-          Kaung Myat Kyaw (Barry),
+          Abulimiti Musitapa (Mustafa),
         </a>
         {' '}
-        a passionate software engineer specializing in React and Ruby on Rails. I thrive on delivering state-of-the-art software solutions. When I&apos;m not coding, you&apos;ll find me exploring the fascinating worlds of Math, Movies, and Music.
+        Passionate Software Engineering Specialist dedicated to crafting innovative and impactful software solutions. When I'm not developing software, I enjoy playing basketball, hitting the gym, diving into video games, and indulging in movies, blending my love for technology with an active and creative lifestyle.
       </motion.p>
       <motion.p variants={fadeIn('', '', 1, 1)} className={style.text}>
-        My journey into software development was anything but ordinary. As a former third-year student at Maritime University, I made a bold decision to drop out and pursue my true passion. That led me to Microverse, a remote software development school, where I honed my skills through pair programming and real-world projects. I completed the boot camp with unwavering dedication, amassing over
-        {' '}
-        <a
-          href="https://github.com/Rhaegar121"
-          target="_blank"
-          className={style.link}
-          rel="noreferrer"
-        >
-          {' '}
-          2500+ contributions on GitHub
-        </a>
-        {' '}
-        in just one year. My experience in the Students&apos; Union further sharpened my problem-solving and communication abilities.
+      My passion for software development began in high school, where I consistently earned high-achievement awards. At the University of Toronto, I have further honed my skills in computer science through rigorous coursework and co-op experiences. My journey is driven by a commitment to innovation and excellence in software engineering. I am deeply passionate about the open-source community, where knowledge and resources are freely accessible to everyone. I thrive on collaborating with others, contributing to projects, and leveraging the open nature of technology to foster collective progress and innovation. 
       </motion.p>
       <motion.p variants={fadeIn('', '', 1.25, 1)} className={style.text}>
-        Ready to bring your project to life? Reach out—I&apos;m excited to collaborate!
+      Open to new opportunities—let's connect and create something great together!
         {' '}
         <a
-          href="https://drive.google.com/file/d/1tciorak3ZNmMrPPnG_b9eSMnv94fY61_/view?usp=sharing"
+          href="https://drive.google.com/file/d/1DoEBN8G1LRMEI4iAdHiZrI6fqXDtfS8t/view?usp=sharing"
           target="_blank"
           className={style.link}
           rel="noreferrer"
