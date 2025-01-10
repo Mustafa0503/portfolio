@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsDir: '',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -15,7 +15,6 @@ export default defineConfig({
           }
           return null;
         },
-        assetFileNames: 'assets/[name][extname]'
       },
     },
   },
