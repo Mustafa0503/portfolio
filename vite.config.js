@@ -8,22 +8,14 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-    minify: 'terser',
     rollupOptions: {
       input: 'index.html',
       output: {
-        manualChunks: undefined,
-        assetFileNames: 'assets/[name].[hash].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
+        manualChunks: undefined
       }
     }
   },
   resolve: {
     extensions: ['.js', '.jsx']
-  },
-  server: {
-    port: 3000,
-    open: true
   }
 });
