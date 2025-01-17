@@ -13,6 +13,8 @@ const Contact = () => {
   });
 
   const [warning, setWarning] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -24,21 +26,37 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const form = event.target;
-    const isValid = form.checkValidity();
+    setLoading(true);
+    setWarning('');
+    setSuccessMessage('');
 
-    if (isValid) {
-      // Fake submission: Show warning and don't actually submit
-      setWarning('Something went wrong. Please contact me via email in my resume at the top.');
-      
-      // Optionally reset the form here if needed:
-      setForm({
-        name: '',
-        email: '',
-        message: '',
+    const formData = new FormData(event.target);
+    formData.append("access_key", "23a9fb2e-a450-4e71-925f-fcb52c40107a");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
       });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Form Submitted Successfully! I will get back to you soon.");
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        setWarning(data.message || "An error occurred while submitting the form.");
+      }
+    } catch (error) {
+      setWarning("An unexpected error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -50,10 +68,11 @@ const Contact = () => {
       <motion.p variants={fadeIn('', '', 0.15, 1)} className={style.subtitle}>
         I&apos;m always excited to hear about new opportunities and internships. Don&apos;t hesitate to reach out and let&apos;s make something great.
       </motion.p>
-      
-      {/* Display warning message if there was an issue */}
+
+      {/* Display success or warning messages */}
+      {successMessage && <div className={style.success}>{successMessage}</div>}
       {warning && <div className={style.warning}>{warning}</div>}
-      
+
       <div className={style.container}>
         <motion.form
           variants={slideIn('left', '', 0, 1)}
@@ -92,12 +111,21 @@ const Contact = () => {
               onChange={handleChange}
               className={`${style.input} ${style.textarea}`}
             />
-            <button type="submit" className={style.btn_container}>
-              <span className={style.btn_hover}>Get in touch</span>
-              <span className={style.btn}>Get in touch</span>
+            <button
+              type="submit"
+              className={style.btn_container}
+              disabled={loading}
+            >
+              <span className={style.btn_hover}>
+                {loading ? "Sending..." : "Get in touch"}
+              </span>
+              <span className={style.btn}>
+                {loading ? "Sending..." : "Get in touch"}
+              </span>
             </button>
           </div>
         </motion.form>
+
         <motion.div variants={slideIn('right', '', 0, 1)} className={style.img_container}>
           <img src={contact} alt="contact" className={style.img} loading="lazy" />
         </motion.div>
