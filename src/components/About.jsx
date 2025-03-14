@@ -31,7 +31,7 @@ const About = () => (
       Open to new opportunities—let's connect and create something great together!
         {' '}
         <a
-          href="https://drive.google.com/file/d/1DoEBN8G1LRMEI4iAdHiZrI6fqXDtfS8t/view?usp=sharing"
+          href="https://drive.google.com/file/d/1SpCCt2E1sflYOzLjfFeDKKEVaVPfCquk/view?usp=sharing"
           target="_blank"
           className={style.link}
           rel="noreferrer"

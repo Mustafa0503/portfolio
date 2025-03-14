@@ -378,7 +378,7 @@ const navLinks = [
 //   {
 //     id: 4,
 //     name: 'Resume',
-//     url: 'https://drive.google.com/file/d/1DoEBN8G1LRMEI4iAdHiZrI6fqXDtfS8t/view?usp=sharing',
+//     url: 'https://drive.google.com/file/d/1SpCCt2E1sflYOzLjfFeDKKEVaVPfCquk/view?usp=sharing',
 //   },
   {
     id: 5,
