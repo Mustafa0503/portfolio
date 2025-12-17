@@ -43,7 +43,7 @@ const About = () => (
         Ready to bring your project to life? Reach out—I&apos;m excited to collaborate!
         {' '}
         <a
-          href="https://drive.google.com/file/d/1tciorak3ZNmMrPPnG_b9eSMnv94fY61_/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Kiv5VZUkrE9934aXMKg73UPnJefbFiYw/view?usp=sharing"
           target="_blank"
           className={style.link}
           rel="noreferrer"
