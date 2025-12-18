@@ -70,7 +70,7 @@ const Home = () => (
         variants={fadeIn('', '', 0.8, 1)} // Adjust animation delay
         className={style.btn_container}
         onClick={() => {
-            window.location.href = 'https://drive.google.com/file/d/1SpCCt2E1sflYOzLjfFeDKKEVaVPfCquk/view?usp=sharing'; // Example: Redirect to the "About" section
+            window.location.href = 'https://drive.google.com/file/d/15-ydH0DvGni6LiyggV5ve6553A-Hafb5/view?usp=sharing'; // Example: Redirect to the "About" section
         }}
       >
         <span className={style.btn_hover}>
