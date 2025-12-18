@@ -32,7 +32,7 @@ const About = () => (
         {' '}
         <a
 
-          href="https://drive.google.com/file/d/1SpCCt2E1sflYOzLjfFeDKKEVaVPfCquk/view?usp=sharing"
+          href="https://drive.google.com/file/d/15-ydH0DvGni6LiyggV5ve6553A-Hafb5/view?usp=sharing"
 
           target="_blank"
           className={style.link}
